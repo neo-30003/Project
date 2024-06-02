@@ -1,19 +1,19 @@
 "use strict";
 
-let title = prompt("Как называется ваш проект?");
+const title = prompt("Как называется ваш проект?");
 console.log(title);
 
-let screens = prompt(
+const screens = prompt(
   "Какие типы экранов нужно разработать?",
   "Простые, Cложные, Интерактивные"
 );
 console.log(screens);
 
-let screenPrice = +prompt("Сколько будет стоить данная работа?", 12000);
+const screenPrice = +prompt("Сколько будет стоить данная работа?", 12000);
 
-let rollback = 20;
+const rollback = 20;
 
-let adaptive = prompt("Нужен ли адаптив на сайте?");
+const adaptive = prompt("Нужен ли адаптив на сайте?");
 if (adaptive == "Да") {
   console.log(true);
 } else if (adaptive == "да") {
@@ -22,13 +22,13 @@ if (adaptive == "Да") {
   console.log(false);
 }
 
-let service1 = prompt("Какой дополнительный тип услуги нужен?");
-let servicePrice1 = +prompt("Сколько это будет стоить?");
-let service2 = prompt("Какой дополнительный тип услуги нужен?");
-let servicePrice2 = +prompt("Сколько это будет стоить?");
-let fullPrice = screenPrice + servicePrice1 + servicePrice2;
+const service1 = prompt("Какой дополнительный тип услуги нужен?");
+const servicePrice1 = +prompt("Сколько это будет стоить?");
+const service2 = prompt("Какой дополнительный тип услуги нужен?");
+const servicePrice2 = +prompt("Сколько это будет стоить?");
+const fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
-let servicePercentPrice = fullPrice - fullPrice * (rollback / 100);
+const servicePercentPrice = fullPrice - fullPrice * (rollback / 100);
 console.log(fullPrice);
 console.log(Math.ceil(servicePercentPrice));
 
